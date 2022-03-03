@@ -73,7 +73,7 @@ export default App;
 ```
 
 
-### Installation
+### Exmaple
 <table>
   <tr>
     <td>
