@@ -1,8 +1,8 @@
-#  react-native-easy-bottomsheet
+#  [react-native-easy-bottomsheet](https://www.npmjs.com/package/react-native-easy-bottomsheet)
 
-## Get Started
+## Get Started 
 
-### Installation
+### Installation 
 ```js
 npm install react-native-easy-bottomsheet
 ```
@@ -12,27 +12,26 @@ npm install react-native-easy-bottomsheet
 import React, { useState } from "react";
 import { Text, Pressable, View, ScrollView } from "react-native";
 import BottomSheet from "react-native-easy-bottomsheet";
-import styles from "./style.css";
 
 const App = () => {
-  const [modalVisible, setModalVisible] = useState(false);
+  const [isVisible, setVisible] = useState(false);
   return (
     <View style={styles.centeredView}>
       <BottomSheet
         bottomSheetTitle={"Notifications"}
-        // bottomSheetIconColor="red"
+        bottomSheetIconColor="#0A2463"
         bottomSheetStyle={{
           backgroundColor: "white",
           maxHeight: "20%",
           minHeight: "15%",
         }}
-        // bottomSheetTitleStyle={{color: 'red'}}
-        setBottomSheetVisible={setModalVisible}
-        bottomSheetVisible={modalVisible}
+        bottomSheetTitleStyle={{color: '#0A2463'}}
+        setBottomSheetVisible={setVisible}
+        bottomSheetVisible={isVisible}
       >
         <ScrollView>
           <Text>Hi</Text>
-          <Text>i'm, kedar09</Text>
+          <Text>I'm, kedar09</Text>
         </ScrollView>
       </BottomSheet>
       <Pressable
@@ -72,8 +71,7 @@ const styles = StyleSheet.create({
 export default App;
 ```
 
-
-### Exmaple
+### Usage
 <table>
   <tr>
     <td>
@@ -110,6 +108,19 @@ export default App;
      </td>
     </tr>
 </table>
+
+### Available props
+
+| Name                      | Type      | Default      |
+|---------------------------|-----------| ------------ |
+| `bottomSheetStyle`        | style     |              |
+| `bottomSheetTitleStyle`   | style     |              |
+| `bottomSheetTitle`        | string    |              |
+| `bottomSheetIconColor`    | string    | #000         |
+| `bottomSheetVisible`      | bool      | false        |
+| `setBottomSheetVisible`   | function  |              |
+
+
 
 ### Author
 Feel free to ask me questions [here](https://github.com/kedar09/react-native-easy-bottomsheet/issues) - @kedar09!
