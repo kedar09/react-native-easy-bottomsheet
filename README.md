@@ -26,7 +26,7 @@ const App = () => {
           minHeight: "15%",
         }}
         bottomSheetTitleStyle={{color: '#0A2463'}}
-        setBottomSheetVisible={setVisible}
+        onRequestClose={() => setVisible(!isVisible)}
         bottomSheetVisible={isVisible}
       >
         <ScrollView>
@@ -118,7 +118,8 @@ export default App;
 | `bottomSheetTitle`        | string    |              |
 | `bottomSheetIconColor`    | string    | #000         |
 | `bottomSheetVisible`      | bool      | false        |
-| `setBottomSheetVisible`   | function  |              |
+| `onRequestClose`          | function  |              |
+| `onBackdropPress   `      | bool      | false        |
 
 
 
