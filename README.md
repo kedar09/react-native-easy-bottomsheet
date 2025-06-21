@@ -10,7 +10,7 @@ npm install react-native-easy-bottomsheet
 ### Usage
 ```js
 import React, { useState } from "react";
-import { Text, Pressable, View, ScrollView } from "react-native";
+import { Text, Pressable, View, ScrollView, StyleSheet } from "react-native";
 import BottomSheet from "react-native-easy-bottomsheet";
 
 const App = () => {
@@ -37,7 +37,7 @@ const App = () => {
       <Pressable
         style={[styles.button, styles.buttonOpen]}
         onPress={() => {
-          setModalVisible(true);
+          setVisible(true);
         }}
       >
         <Text style={styles.textStyle}>Show BottomSheet</Text>
